@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Стили для всей страницы */
+:root {
+    font-size: 16px;
+    --page-bg-color: #161616;
+    --element-bg-color: #1E1E1E;
+    --selected-button-color: #2B2A2A;
+    --element-border-gray-color: #757575;
+    --button-green-color: #27321E;
+    --selected-button-green-color: #2A3621;
+    --button-red-color: #321F1E;
+    --selected-button-red-color: #3D2624;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--page-bg-color);
+    color: white;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.container {
+    width: 1100px;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+.usualButton {
+    background-color: var(--page-bg-color);
+    border-radius: 5px;
+    border: 1px solid white;
+    height: 36px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: white;
+    padding: 8px 16px;
+}
+
+/* Header */
+header {
+    width: 100%;
+    padding-top: 50px;
+    position: fixed;
+}
+
+.headerUpperString {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.filledFavList {
+    display: none;
+}
+
+.headerButtons {
+    width: 284px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerButton {
+    width: 50px;
+    height: 50px;
+    background-color: var(--element-bg-color);
+    border-radius: 10px;
+    border: 0;
+}
+
+.headerButton:hover {
+    background-color: var(--selected-button-color);
+}
+
+.pressedHeaderButton {
+    background-color: var(--selected-button-color);
+}
+
+/* Стили для формы регистрации и авторизации */
+.regForm {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 282px;
+    height: 289px;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 228px;
+    height: 187px;
+}
+
+.userBox {
+    padding: 26px;
+    margin-top: 10px;
+}
+
+form input {
+    height: 36px;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--element-bg-color);
+    border: 1px solid var(--element-border-gray-color);
+}
+
+.userFormButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.userFormButton {
+    height: 36px;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: 1px solid white;
+    color: white;
+}
+
+.userFormMainButton {
+    background-color: var(--page-bg-color);
+}
+
+/* Фильтры */
+
+.mainFilters {
+    display: flex;
+    justify-content: left;
+    column-gap: 20px;
+}
+
+.dropDownContainer {
+    display: none;
+    background-color: var(--element-bg-color);
+    border-radius: 20px;
+    border: 1px solid white;
+    position: absolute;
+}
+
+.filtersContainer {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    padding: 16px;
+}
+
+.additionalFilters {
+    width: 655px;
+}
+
+.worldviewVariations {
+    width: 220px;
+}
+
+.worldviewVariations button:last-child {
+    width: 100%;
+}
+
+.inputWithLoupe {
+    background-image: url("../img/loupe.png"); 
+    background-position: right 16px top 8px; 
+    padding: 8px 42px 9px 16px;
+}
+
+.headerFilters button, .headerFilters input {
+    border-radius: 20px;
+    border: 1px solid var(--element-border-gray-color);
+    height: 36px;
+    font-size: 1rem;
+    background-repeat: no-repeat; 
+    margin-bottom: 10px;
+}
+
+.buttonWithArrowDown {
+    padding: 8px 40px 9px 16px;
+    background-image: url("../img/arrow.png");
+    background-position: right 16px top 14px; 
+    color: var(--element-border-gray-color);
+    background-color: var(--element-bg-color);
+}
+
+.buttonWithArrowDown:hover {
+    background-color: var(--selected-button-color);
+}
+
+.buttonWithArrowUp {
+    padding: 8px 40px 9px 16px;
+    background-image: url("../img/arrowUp.png");
+    background-position: right 16px top 14px; 
+    color: var(--element-border-gray-color);
+    background-color: var(--selected-button-color);;
+}
+
+.buttonWithArrowUp:hover {
+    background-color: var(--element-bg-color);
+}
+
+.checkBoxInputGreen {
+    color: var(--element-border-gray-color);
+    background-color: var(--button-green-color);
+    padding: 8px 16px;
+}
+
+.checkBoxInputGreen:hover {
+    background-color: var(--selected-button-green-color);
+}
+
+.checkBoxInputRed {
+    color: var(--element-border-gray-color);
+    background-color: var(--button-red-color);
+    padding: 8px 16px;
+}
+
+.checkBoxInputRed:hover {
+    background-color: var(--selected-button-red-color);
+}
+
+.headerFilters input, .openOrCloseFilters {
+    color: white;
+    background-color: var(--element-bg-color);
+}
+
+.openOrCloseFilters {
+    text-align: left;
+    width: 65px;
+}
